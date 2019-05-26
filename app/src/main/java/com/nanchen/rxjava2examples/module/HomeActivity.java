@@ -14,6 +14,7 @@ import com.nanchen.rxjava2examples.R;
 import com.nanchen.rxjava2examples.base.BaseActivity;
 import com.nanchen.rxjava2examples.base.BaseViewPagerAdapter;
 import com.nanchen.rxjava2examples.constant.GlobalConfig;
+import com.nanchen.rxjava2examples.module.rxjava2.anmis.RxAnmiatorFragment;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.OperatorsFragment;
 import com.nanchen.rxjava2examples.module.rxjava2.usecases.UseCasesFragment;
 import com.nanchen.rxjava2examples.module.web.WebViewActivity;
@@ -57,12 +58,14 @@ public class HomeActivity extends BaseActivity {
         initToolBar(mToolbar, false, "");
         String []titles = {
                 GlobalConfig.CATEGORY_NAME_OPERATORS,
-                GlobalConfig.CATEGORY_NAME_EXAMPLES
+                GlobalConfig.CATEGORY_NAME_EXAMPLES,
+                GlobalConfig.CATEGORY_NAME_ANMIATORS
         };
 
         BaseViewPagerAdapter pagerAdapter = new BaseViewPagerAdapter(getSupportFragmentManager(),titles);
         pagerAdapter.addFragment(new OperatorsFragment());
         pagerAdapter.addFragment(new UseCasesFragment());
+        pagerAdapter.addFragment(new RxAnmiatorFragment());
 
         mViewPager.setAdapter(pagerAdapter);
         mTabLayout.setupWithViewPager(mViewPager);

@@ -12,4 +12,5 @@ public final class GlobalConfig {
 
     public final static String CATEGORY_NAME_OPERATORS = "操作符";
     public final static String CATEGORY_NAME_EXAMPLES = "例子";
+    public final static String CATEGORY_NAME_ANMIATORS = "动画";
 }

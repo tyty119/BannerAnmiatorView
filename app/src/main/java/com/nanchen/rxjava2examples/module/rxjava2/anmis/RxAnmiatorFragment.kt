@@ -4,6 +4,7 @@ import android.content.Intent
 import com.nanchen.rxjava2examples.model.OperatorModel
 import com.nanchen.rxjava2examples.module.rxjava2.CategoryBaseFragment
 import com.nanchen.rxjava2examples.module.rxjava2.anmis.item.RxAnmiatorActivity
+import java.util.*
 
 /**
  * Description:
@@ -13,6 +14,7 @@ import com.nanchen.rxjava2examples.module.rxjava2.anmis.item.RxAnmiatorActivity
 class RxAnmiatorFragment:CategoryBaseFragment() {
 
     override fun fillData() {
+        data = ArrayList()
         data.add(OperatorModel("anmi", "anmi_des"))
     }
 
